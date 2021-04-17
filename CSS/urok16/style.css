@@ -1,0 +1,168 @@
+/* Обращения бывают след типов:
+1) + теги p
+2) + классы .
+3) + ID #
+4) + атрибуты [] */
+
+
+
+/* Базовые настройки страницы */
+*{
+    box-sizing: border-box;
+}
+
+body, p{
+    margin: 0;
+}
+
+/* Конец базовых настроек*/
+
+
+
+/* Универсальные стили */
+
+
+    /*  , - означает подолнительное обращение к тому или иному элементу
+        Это перечисление подключения новых классов */
+    .left, .ul_li > li{
+        float: left;
+        /* float - это обтекаание, то есть - выравнивание. В данном случае в левую сторону */
+    }
+
+    .right{
+        float: right;
+    }
+
+    .ul_li{
+        list-style: none;
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .ul_li li{
+        padding: 10px 15px;
+    }
+
+    .b-r li{
+        border-right: 1px solid #dadada;
+
+        /* border - границы
+            границы: ширина тип цвет; */
+    }
+
+    .b-r li:last-child{
+        border-right: 0;
+    }
+
+
+    .container{
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    .m-l-10{
+        margin-left: 10px;
+    }
+
+    .red{
+        color: red;
+    }
+
+    .orange{
+        color: orange;
+    }
+
+    .blue{
+        color: #7cd0f5;
+    }
+
+    .dropdown_menu{
+        display: none;
+        position: absolute;
+        background: white;
+        border: 1px solid black;
+        width: 100%;
+        left: 0;
+        top: 38px;
+    }
+
+    .hover_menu li:hover .dropdown_menu{
+        display: block;
+    }
+    /* margin - это внешний отступ
+            Так же margin - это выравнивание
+                margin: 0 auto - это 0 отступов со всех сторон и это значит, выравнять по центру */
+
+
+/* Конец универсальных стилей */
+
+
+
+/* Стили для страницы */
+
+    /* Урок 14 */
+        .verhnee_menu{
+            background: #f7f7f7;
+            display: inline-block;
+            width: 100%;
+        }
+
+    /* Урок 15 */
+        .b-r i{
+            margin-right: 10px;
+        }
+
+
+        .msg {
+            position: relative;
+            top: -11px;
+            right: 16px;
+            background: red;
+            width: 13px;
+            height: 13px;
+            text-align: center;
+            color: white;
+            font-size: 11px;
+            border-radius: 13px;
+            display: inline-block;
+        }
+        /* Position - это позиционирование */
+
+
+        /* Урок 16 */
+        .center_menu ul {
+            display: flex;
+            /* display - Это блок отображения. Возможные вариации отобраения */
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sryi_krug {
+            background: #ececec;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 2.3;
+            border: 1px solid #ececec;
+            border-radius: 20px;
+            color: #4c4b6c;
+        }
+
+        .center_menu .right p:first-child{
+            font-weight: bold;
+            color: #4c4b6c;
+        }
+
+        .center_menu .right p{
+            color: #ababab;
+        }
+
+        .nijnee_menu {
+            display: inline-block;
+            width: 100%;
+            background: #f4f4f4;
+            position: relative;
+        }
+/* Конец стилей для страницы */

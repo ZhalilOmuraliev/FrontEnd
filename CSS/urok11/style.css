@@ -1,0 +1,47 @@
+/* Обращения бывают след типов:
+1) + теги p
+2) + классы .
+3) + ID #
+4) + атрибуты [] */
+        
+.fon_yellow{
+    background: red;
+}
+
+.second_class{
+    border: 10px solid black;
+}
+
+/* Перечисление классов, которые находятся в одном сегменте CLASS
+class="fon_yellow second_class sun" */
+/*.fon_yellow.second_class.sun {
+    background: yellow;
+}
+*/
+
+
+/* Данная запись трактуется след образом:
+    main_menu - основной родительский блок
+    fon_yellow - внутренний элемент, который нах-ся внутри блока main_menu
+    
+    По простому:
+        CSS должен найти в Html  класс fon_yellow, который нах-ся в main_menu*/
+.main_menu .fon_yellow {
+    background: pink;
+}
+
+
+/*  если нужн указать для нескольких блоков одни и те же цвета, то мы можем перечислить class, id, тег и атрибут
+через запятую */
+.primer div,
+.primer p{
+    background: red;
+}
+
+#my_id{
+    background: yellow;
+}
+
+[data-zhalil="name"] {
+    background: pink;
+}

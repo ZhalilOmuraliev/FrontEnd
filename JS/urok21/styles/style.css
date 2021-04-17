@@ -1,0 +1,516 @@
+s/* Обращения бывают след типов:
+1) + теги p
+2) + классы .
+3) + ID #
+4) + атрибуты [] */
+
+
+
+/* Базовые настройки страницы */
+*{
+    box-sizing: border-box;
+}
+
+body, p{
+    margin: 0;
+}
+
+/* Конец базовых настроек*/
+
+
+
+/* Универсальные стили */
+
+
+    /*  , - означает подолнительное обращение к тому или иному элементу
+        Это перечисление подключения новых классов */
+    .left, .ul_li > li{
+        float: left;
+        /* float - это обтекаание, то есть - выравнивание. В данном случае в левую сторону */
+    }
+
+    .right{
+        float: right;
+    }
+
+    .ul_li {
+        list-style: none;
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .ul_li li{
+        padding: 10px 15px;
+    }
+
+    .b-r li{
+        border-right: 1px solid #dadada;
+
+        /* border - границы
+            границы: ширина тип цвет; */
+    }
+
+    .b-r li:last-child{
+        border-right: 0;
+    }
+
+
+    .container{
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    .m-l-10{
+        margin-left: 10px;
+    }
+
+    .red{
+        color: red;
+    }
+
+    .orange{
+        color: orange;
+    }
+
+    .blue{
+        color: #7cd0f5;
+    }
+
+    .dropdown_menu{
+        display: none;
+        position: absolute;
+        background: white;
+        border: 1px solid black;
+        width: 100%;
+        left: 0;
+        top: 38px;
+        z-index: 1;
+    }
+
+    .hover_menu li:hover .dropdown_menu{
+        display: block;
+    }
+    .body_product{
+        margin-top: 10px;
+    }
+    .dnone{
+        display: none;
+    }
+
+    .bg_orange{
+        background: orange;
+    }
+    .bg_green{
+        background: green;
+    }
+    .bg_blue{
+        background: rgb(83, 109, 228);
+    }
+    .bg_red{
+        background: rgb(219, 63, 63);
+    }
+    .text_gray{
+        color: rgb(145, 143, 143);
+    }
+    /* margin - это внешний отступ
+            Так же margin - это выравнивание
+                margin: 0 auto - это 0 отступов со всех сторон и это значит, выравнять по центру */
+
+
+/* Конец универсальных стилей */
+
+
+
+/* Стили для страницы */
+
+    /* Урок 14 */
+        .verhnee_menu{
+            background: #f7f7f7;
+            display: inline-block;
+            width: 100%;
+        }
+
+    /* Урок 15 */
+        .b-r i{
+            margin-right: 10px;
+        }
+
+
+        .msg {
+            position: relative;
+            top: -11px;
+            right: 16px;
+            background: red;
+            width: 13px;
+            height: 13px;
+            text-align: center;
+            color: white;
+            font-size: 11px;
+            border-radius: 13px;
+            display: inline-block;
+        }
+        /* Position - это позиционирование */
+
+
+        /* Урок 16 */
+        .center_menu ul {
+            display: flex;
+            /* display - Это блок отображения. Возможные вариации отобраения */
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sryi_krug {
+            background: #ececec;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 2.3;
+            border: 1px solid #ececec;
+            border-radius: 20px;
+            color: #4c4b6c;
+        }
+
+        .center_menu .right p:first-child{
+            font-weight: bold;
+            color: #4c4b6c;
+        }
+
+        .center_menu .right p{
+            color: #ababab;
+        }
+
+        .nijnee_menu {
+            display: inline-block;
+            width: 100%;
+            background: #f4f4f4;
+            position: relative;
+        }
+
+        /* Урок 17 */
+
+        .block_title {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #cfcece;
+        }
+
+        #product{
+            padding: 0 15px;
+        }
+
+        #body_block {
+            margin-top: 20px;
+            /* display: inline-block; */
+        }
+
+        .list_product > .product {
+            float: left;
+        }
+
+        .block_stars{
+            display: inline-block;
+        }
+
+        .block_stars > div{
+            float: left;
+        }
+
+/* Product styles */
+        .product{
+            display: inline-block;
+            min-height: 310px;
+        }
+        .product img{
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            object-fit: contain;
+        }
+        .stars > i {
+            color: #ffcc33;
+            font-size: 13px;
+            margin-left: -5px;
+        }
+        .stars > i:first-child {
+            margin-left: 0;
+        }
+        .stars{
+            margin-right: 5px;
+        }
+        .reviews {
+            font-size: 12px;
+            line-height: 1.9;
+        }
+        .price span {
+            font-size: 25px;
+            font-weight: bold;
+            color: #4c4b6c;
+        }
+        .price del {
+            font-size: 20px;
+            margin-left: 15px;
+            color: gray;
+        }
+        .btns li{
+            padding: 0;
+        }
+        .btns .ul_li{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .btns li:hover .sryi_krug{
+            background: #7cd0f5;
+            color: white;
+            cursor: pointer;
+        }
+        .btns .sryi_krug{
+            transition: .5s;
+        }
+        
+
+        .desc_img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #ffffff80;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #e8e8e8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: 1s;
+            text-align: center;
+            
+        }
+        .desc_img2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #ffffffde;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #e8e8e8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+            transition: 1s;
+            text-align: center;
+        }
+        .ttl{
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 3px;
+            color: #4c4b6c;
+        }
+        .img {
+            position: relative;
+        }
+        .list_product {
+            display: flex;
+            justify-content: space-between;
+        }
+        .tooltip {
+            position: absolute;
+            right: -9px;
+            background: #abcd02;
+            color: white;
+            padding: 2px 7px;
+            font-size: 14px;
+            top: 7px;
+            border-radius: 8px;
+            z-index: 5;
+        }
+
+        .kid_banner{
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+
+        .product:hover .dnone{
+            display: block;
+        }
+        .product:hover .block_stars{
+            display: none;
+        }
+        .product:hover .desc_img{
+            opacity: 1;
+        }
+
+        /* urok 18 */
+
+        #banner img{
+            width: 100%;
+        }
+
+        .btn_call {
+            text-align: center;
+            margin-top: 10px
+        }
+        .btn_call a:hover{
+            background: #12688d;
+        }
+        .btn_call a{
+            background: #7cd0f5;
+            color: white;
+            padding: 10px 30px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: .4s;
+        }
+
+        .f_li_hover li{
+            padding: 5px 0;
+        }
+        .f_li_hover li:hover{
+            margin-left: 20px;
+            transition: .5s;
+            font-weight: bold;
+        }
+        .f_ttl:before{
+            content: "";
+            width: 50px;
+            height: 3px;
+            background: #d6d6d6;
+            position: absolute;
+            bottom: -7px;
+        }
+        .f_ttl{
+            position: relative;
+            margin-bottom: 47px;
+        }
+        footer .ul_li li{
+            padding: 2px;
+        }
+        
+        .f_brdr{
+            border-bottom: 2px solid gray;
+        }
+
+        .foot{
+            height: 100px;
+        }
+
+        footer .foot{
+            align-items: center;
+        }
+    
+/* Конец стилей для страницы */
+
+/* Мобильная адаптация */
+        /* Урок 19 */
+
+        /* Заметка:
+    Есть 2 вида адаптации:
+        1) Резиновый шаблон - когла весь сайт задан в % соотношении то есть, когда мы будем уменьшать размер
+            браузера все данные будут расжиматься или сжиматься
+        2) Фиксированный - это когда мы адаптируем наш сайт под стандарты того или иного устройства */
+
+    
+        /* @media - параметр, который нужен для того, чтобы обратится к размеру устройства пользователя
+            max-width - этот параметр нужен для того, чтобы указать минимальную ширину блока и указать для него 
+            и для экранов ниже размером стили */
+
+            /* Пример размерв айфон 6/7/8 plus 414px */
+            @media (max-width:414px) {
+
+            }
+            /* Данная запись говорит о том, чтобы я мог получить размер экрана 414рх и использовал стили, которые
+            в нем будут заключены */
+
+
+            /* Правила адаптации
+            
+            1) Адаптация начинается с большого размера к меньшему*/
+
+
+    /* Старт адаптации */
+
+
+    @media (max-width: 1024px) {
+        .container{
+            width: auto;
+        /* max-width: 1024 - от этого размера и ниже
+           min-width: 1024 - лт этого размера и выше*/
+        }
+
+
+        .list_product{
+            flex-wrap: wrap;
+            justify-content: left;
+        }
+        .product{
+            margin-right: 7px;
+        }
+        .list_product > .product:nth-child(4n){
+            margin-right: 0;
+        }
+        .verhnee_menu, .center_menu p {
+            font-size: 14px;
+        }
+    }
+    
+    @media (max-width: 812px){
+        .list_product > .product:nth-child(3n){
+            margin-right: 0;
+        }
+        .product{
+            margin-right: 1px;
+        }
+        .verhnee_menu .left{
+            display: none;
+        }
+        .center_menu .left{
+            display: none;
+        }
+        .m-l-10 {
+            margin-left: 0;
+        }
+        .f_ttl{
+            font-size: 17px;
+        }
+    }
+
+    @media (max-width: 480px){
+        .verhnee_menu, .center_menu p{
+            font-size: 12px;
+        }
+        .center_menu img {
+            width: 70px;
+        }
+        .center_menu .ul_li >li:nth-child(4) {
+            display: none;
+        }
+        .center_menu li {
+            padding-top: 0;
+        }
+        .center_menu .ul_li .right p {
+            font-size: 10px;
+        }
+        .nijnee_menu {
+            font-size: 10px;
+        }
+        .product{
+            margin-right: 0;
+            width: 45%;
+        }
+        .product img{
+            width: 100%;
+        }
+        .list_product {
+            justify-content: space-between;
+        }
+        .ttl{
+            font-size: 12px;
+        }
+    }
+/* Конец мобильной адаптации */

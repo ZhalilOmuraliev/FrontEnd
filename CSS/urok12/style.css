@@ -1,0 +1,120 @@
+/* Обращения бывают след типов:
+1) + теги p
+2) + классы .
+3) + ID #
+4) + атрибуты [] */
+        
+.fon_yellow{
+    background: red;
+}
+
+.second_class{
+    border: 10px solid black;
+}
+
+/* Перечисление классов, которые находятся в одном сегменте CLASS
+class="fon_yellow second_class sun" */
+/*.fon_yellow.second_class.sun {
+    background: yellow;
+}
+*/
+
+
+/* Данная запись трактуется след образом:
+    main_menu - основной родительский блок
+    fon_yellow - внутренний элемент, который нах-ся внутри блока main_menu
+    
+    По простому:
+        CSS должен найти в Html  класс fon_yellow, который нах-ся в main_menu*/
+.main_menu .fon_yellow {
+    background: pink;
+}
+
+
+/*  если нужн указать для нескольких блоков одни и те же цвета, то мы можем перечислить class, id, тег и атрибут
+через запятую */
+.primer div,
+.primer p{
+    background: red;
+}
+
+#my_id{
+    background: yellow;
+}
+
+[data-zhalil="name"] {
+    background: pink;
+}
+
+
+/* UROK 12 */
+
+.urok12{ 
+    background-image: url(https://bipbap.ru/wp-content/uploads/2017/08/2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 100%;
+    margin-top: 120px;
+    margin-bottom: 120px;
+    color: white;
+    /* margin-left: 120px; */
+    /* padding-top: 50px; */
+    /* margin-top: 120%; */
+    /* px - конкретное заданое число измерения, которая не изменяетсяы 
+    rem - отсносительная единица измерения, которая базируется от HTML
+    em - отсносительная единица измерения, которая базируется от родителя
+    % - отсносительная единица измерения, которая базируется от ширины 
+       экрана либо блока, к которому он задан */
+
+
+    /* Правила 4х сторон */
+    /* 
+        Нужно всешда знать, что есть 4 стороны: верхняя, левая, нижняя, правая
+    */
+
+    /* Цвет  в дисплее
+        
+        Оранжевый цвет в дисплее -  margin -  внешний отступ
+        Желтый -  border - границы
+        Зеленый  - padding - внутренние отступы
+        Синий - content - содержимое документа
+
+    */
+}
+
+.urok12_1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    border: 2px solid black;
+}
+
+a{
+    display: block;
+
+    /* block - блочная структура
+        inline- block - строчная структура
+        flex - удобная адаптация ширины  */
+}
+
+.urok12_1 ul li:nth-child(3){
+    background: red;
+}
+
+.urok12_1 ul li:nth-child(2n){
+    background: yellow;
+}
+
+/* Псевдо классы - это событие + обращение к позициям того или иного блока */
+
+
+/* Задача:
+    По наведению на блок urok12_1 задний фон доолжен измениться
+     */
+.urok12_1:hover {
+    background: chartreuse;
+}
+/* urok12_1 - на какой элемент должен быть наведен курсор
+    hover - наведение */
